@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+
+
+
+<!--start of actual A frame code-->
+
+
+
+<html>
+
+
+
+
+<head>
+
+<script src="https://aframe.io/releases/0.7.0/aframe.min.js">
+
+</script>
+
+</head>
+
+
+
+
+
+<body>
+
+
+
+
+<a-scene>
+
+    <a-camera position="0 2 0" user-height="0">
+
+    </a-camera>
+
+
+<a-assets>
+
+<img id="SkyTexture" src="daytime.jpg">.             
+
+</img>
+
+<!--src is source-->
+
+</a-assets>
+
+
+
+
+<a-sky src="#SkyTexture">
+
+</a-sky>
+
+
+
+
+<!--floating objects-->
+<!--units are in meters: x y z, +z towards line of vision, +x right horizontal, +y up vertical-->
+<!--centre meter square at 0 2 0 cannot be occupied by objects cos the "person's eye level" is there-->
+<!--duration counted in ms, rotation in degrees-->
+
+
+<a-box position="0 3 -6" color="red" height="2" width="1" depth="1">
+
+    <a-animation attribute="rotation" to="360 0 0" repeat="indefinite" easing="linear" dur="3000">
+
+    </a-animation>
+
+</a-box>
+
+
+
+<a-cone position="0 0 -6" color="yellow" height="2" radius-bottom="0.5">
+
+    <a-animation attribute="rotation" to="0 0 360" repeat="indefinite" easing="linear" dur="3000">
+
+    </a-animation>
+
+</a-cone>
+
+
+
+<a-cylinder position="3 0 -6" color="green" radius="0.5" height="2">
+
+    <a-animation attribute="rotation" to="0 0 -360" repeat="indefinite" easing="linear" dur="3000">
+
+    </a-animation>
+
+</a-cylinder>
+
+
+
+<a-box position="3 3 -6" color="blue" height="2" width="1" depth="1">
+
+    <a-animation attribute="rotation" to="-360 0 0" repeat="indefinite" easing="linear" dur="3000">
+
+    </a-animation>
+
+</a-box>
+
+
+
+
+</a-scene>
+
+</body>
+
+</html>
+
